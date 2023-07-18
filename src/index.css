@@ -1,13 +1,70 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
+
+html,
+body {
+    scroll-behavior: smooth;
+}
+
+@keyframes colorChange {
+    0% {
+        color: red;
+    }
+
+    25% {
+        color: blue;
+    }
+
+    50% {
+        color: green;
+    }
+
+    75% {
+        color: yellow;
+    }
+
+    100% {
+        color: red;
+    }
+}
+
+@keyframes gradient-x {
+
+    0%,
+    100% {
+        background-size: 400% 400%;
+        background-position: left center;
+    }
+
+    50% {
+        background-size: 200% 200%;
+        background-position: right center;
+    }
+}
+
+.animate-gradient-x {
+    animation: gradient-x 15s ease infinite;
+}
+
+.animate-color-change {
+    animation: colorChange 4s linear infinite;
+}
+
+.custom-shadow {
+    box-shadow: 0 0 10px rgba(255, 255, 0, 0.5);
+}
+
+.custom-shadow:hover {
+    box-shadow: 0 0 20px rgba(255, 255, 0, 0.8);
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
